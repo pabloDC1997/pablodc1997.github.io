@@ -1,1 +1,1 @@
-Meu currículo online utilizando como base a template [https://startbootstrap.com/themes/resume/](https://startbootstrap.com/themes/resume/)
+Site em manutenção - Nova atualização dia 27/08/2026!!!
