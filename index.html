@@ -280,6 +280,45 @@
   }
   /* Título final apenas */
   .final-coracao{ font-size:clamp(3rem,18vw,6rem); animation:bate-coracao 1.4s ease-in-out infinite; margin-bottom:2vh; }
+
+  /* Página de 2 meses */
+  .album-fotos{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+    flex-wrap:wrap;
+    margin:25px 0;
+  }
+
+  .figurinha{
+    width:180px;
+    height:220px;
+    background:#fff;
+    padding:10px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+    transform:rotate(-6deg);
+    animation:flutuaFigurinha 4s ease-in-out infinite;
+  }
+
+  .figurinha:nth-child(2){
+    transform:rotate(6deg);
+    animation-delay:1.5s;
+  }
+
+  .figurinha img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:6px;
+  }
+
+  @keyframes flutuaFigurinha{
+    0%,100%{transform:translateY(0) rotate(var(--rot, -6deg));}
+    50%{transform:translateY(-12px) rotate(var(--rot, -6deg));}
+  }
+
 </style>
 </head>
 <body>
@@ -418,9 +457,45 @@
   <p class="frase" style="margin-top: 8px; font-weight: bold;">
     Feliz 1 mês de namoro, meu amor.
   </p>
-
-  <button class="botao-sim" onclick="event.stopPropagation(); reiniciar();">Te Amo ❤️</button>
+  <button class="botao-sim" onclick="event.stopPropagation(); proximo();">
+    Continuar ❤️
+  </button>
+  
 </section>
+
+<!-- TELA EXTRA - 2 MESES DE NAMORO -->
+<section class="tela bg-romantico" data-index="11">
+  <div class="coracoes" data-hearts></div>
+
+  <span class="selo">💖 2 Meses de Namoro 💖</span>
+
+  <!--<h1 class="titulo-cena">
+    Feliz 2 Meses de Namoro ❤️
+  </h1>-->
+
+  <div class="album-fotos">
+
+    <div class="figurinha" style="--rot:-8deg;">
+      <img src="foto2_dois_meses.jpeg" alt="Nossa Foto 1">
+    </div>
+
+    <div class="figurinha" style="--rot:8deg;">
+      <img src="foto1_dois_meses.jpeg"" alt="Nossa Foto 2">
+    </div>
+
+  </div>
+
+  <p class="descricao" style="max-width:750px;">
+    Dois meses podem parecer pouco para quem olha de fora, mas para mim foram suficientes para colecionar momentos que vou guardar para sempre. 💕
+  </p>
+
+  <button class="botao-sim"
+          onclick="event.stopPropagation(); reiniciar();">
+    Te amo
+  </button>
+
+</section>
+
   <!-- Barra de progresso (aparece só na jornada) -->
   <div class="progresso" id="progresso" style="display:none;">
     <span class="bolinha"></span><span class="bolinha"></span><span class="bolinha"></span>
